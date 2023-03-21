@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            
+            .table{
+                padding-left:200px;
+                height:250px;
+                width:100px;
+            }
+            body{
+                background-color: rgb(168, 177, 177);
+            }
+        </style>
+    </head>
+    <body>
+       
+          
+            
+        </div>
+        
+        <div class="table">
+            <h1> Database</h1>
+            <a href="/insert"><button style="background-color:lightgreen;margin-bottom:10px;border-radius:5px">Insert</button></a>
+            <table border="2">
+                <tr>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>language</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+                {%for i in data%}
+                <tr>
+                    <td>{{i.id}}</td>
+                    <td>{{i.name}}</td>
+                    <td>{{i.language}}</td>
+                    <td><a href="{{url_for('update',id=i.id)}}"><button style="background-color:teal;">update</button></a></td>
+                    <td><a href="{{url_for('delete',id=i.id)}}"><button style="background-color:red;border:2px solid red;">delete</button></a></td>
+                </tr>
+                {%endfor%}
+            </table>
+        </div>
+        
+    </body>
+</html>

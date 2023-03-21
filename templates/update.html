@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color: rgb(158, 181, 96);
+            }
+            .color{
+              
+               
+               margin-top:10%;
+            }
+            .bg{
+                background-color:lightgray;
+            }
+            .btn{
+                background-color:gray;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form action="/update/{{data.id}}" method="post">
+            <div class="color">
+            <input class="bg" name="id" placeholder="enter id" value={{data.id}}>
+            <input class="bg" name="name" placeholder="enter name" value={{data.name}}>
+            <input class="bg" name="language" placeholder="enter language" value={{data.language}}>
+            <input class="btn" type="submit">
+            </div>
+        </form>
+       
+       
+    </body>
+</html>
